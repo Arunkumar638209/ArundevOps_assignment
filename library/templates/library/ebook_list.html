@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Book List</title>
+</head>
+<body>
+    <h1>E-Book List</h1>
+    <a href="{% url 'upload_ebook' %}">Upload New E-Book</a>
+    <ul>
+        {% for ebook in ebooks %}
+            <li><a href="{% url 'ebook_detail' ebook.id %}">{{ ebook.title }} by {{ ebook.author }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

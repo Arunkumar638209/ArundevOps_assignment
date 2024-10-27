@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ ebook.title }}</title>
+</head>
+<body>
+    <h1>{{ ebook.title }}</h1>
+    <p>Author: {{ ebook.author }}</p>
+    <p>Uploaded at: {{ ebook.uploaded_at }}</p>
+    <a href="{{ ebook.file.url }}">Download E-Book</a>
+    <br>
+    <a href="{% url 'ebook_list' %}">Back to List</a>
+</body>
+</html>
